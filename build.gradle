@@ -43,7 +43,7 @@ task cucumber() {
             args = [
                     '--plugin', 'html:reports/index.html',
                     '--plugin', 'pretty',
-                    '--glue', 'PekerjaanRumah13.StepDefinition',
+                    '--glue', 'com.example.StepDefinition',
                     '--tags', "${tags}",
                     'src/test/resources/feature'
             ]

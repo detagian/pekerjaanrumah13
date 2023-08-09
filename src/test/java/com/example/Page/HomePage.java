@@ -30,9 +30,10 @@ public class HomePage {
 
     public void  clickSortOptionByCharacterDescending(){
         //get all items name store into a list
-        //here assume
-      //int countInventoryItem = driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div")).size();
-        for (int i = 1; i <=6 ; i++) {
+
+        int countInventoryItem = driver.findElements(By.className("inventory_item")).size();
+
+        for (int i = 1; i <=countInventoryItem ; i++) {
             WebElement Item_Name = driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div["+i+"]/div[2]/div[1]/a"));
             Expected_Sort_Item_Name_List.add(Item_Name.getText());
         }
@@ -44,7 +45,7 @@ public class HomePage {
         CharacterDescendingOption.selectByVisibleText("Name (Z to A)");
 
         //get all items name that sorted Z-A store into a list
-        for (int i = 1; i <=6 ; i++) {
+        for (int i = 1; i <=countInventoryItem ; i++) {
             WebElement Item_Name = driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div["+i+"]/div[2]/div[1]/a"));
             Actual_Sort_Item_Name_List.add(Item_Name.getText());
         }
@@ -62,7 +63,8 @@ public class HomePage {
         assertTrue(result);
     }
     public void verifyPriceUnderPromo(int price){
-        for (int i = 1; i <=6 ; i++) {
+        int countInventoryItem = driver.findElements(By.className("inventory_item")).size();
+        for (int i = 1; i <=countInventoryItem ; i++) {
             WebElement Item_Price = driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div["+i+"]/div[2]/div[2]/div"));
             PricePromo.add(Item_Price.getText().replaceAll("^.",""));
             System.out.println();
