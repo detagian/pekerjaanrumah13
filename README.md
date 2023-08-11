@@ -90,21 +90,28 @@ You can run this project using some method:
 - Quick run all 
 
 ``` bash 
-./gradlew test
+./gradlew cucumber
 
 ```
+![gradlew_cucumber](https://raw.githubusercontent.com/detagian/pekerjaanrumah13/main/gradlew_cucumber.png)
+
 
 - Run with Tags 
 
 ``` bash 
-./gradlew test -Ptags="positive"
+./gradlew cucumber -Ptags="positive"
 
 ```
+![gradlew_cucumber_with_tag](https://raw.githubusercontent.com/detagian/pekerjaanrumah13/main/gradlew_cucumber_with_tag.png
+)
 
 **Direct Run From Cucumber File**
 
 - Open login feature file and click play button or Shift+F10
+![Quick_Run_All_Scenario](https://raw.githubusercontent.com/detagian/pekerjaanrumah13/main/Quick_Run_All_Scenario.png)
 - Can also run per Scenario by clicking green play on left side of Scenario line
+![Quick_Run_One_Scenario](https://raw.githubusercontent.com/detagian/pekerjaanrumah13/main/Quick_Run_One_Scenario.png)
+
 ## 4.Report
 
 Report is generated in ```reports``` folder location
@@ -119,3 +126,5 @@ Setup report is inside the ```CucumberOption``` in ```CucumberTest.java``` file
 
 )
 ```
+![Reports](https://raw.githubusercontent.com/detagian/pekerjaanrumah13/main/Report%20Preview.png)
+
