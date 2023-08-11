@@ -99,7 +99,7 @@ You can run this project using some method:
 - Run with Tags 
 
 ``` bash 
-./gradlew cucumber -Ptags="positive"
+./gradlew cucumber -Ptags="@positive"
 
 ```
 ![gradlew_cucumber_with_tag](https://raw.githubusercontent.com/detagian/pekerjaanrumah13/main/gradlew_cucumber_with_tag.png
