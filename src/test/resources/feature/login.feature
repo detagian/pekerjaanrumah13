@@ -1,4 +1,4 @@
-@login
+@webui
 Feature: Login
 
   @valid-login
